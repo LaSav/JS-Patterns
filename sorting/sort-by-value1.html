@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sort-by-value-1</title>
+  </head>
+  <body>
+    <script>
+      const data = [
+        { name: 'Snapper', cost: 4, weight: 1.5 },
+        { name: 'Tuna', cost: 3, weight: 2 },
+        { name: 'Seabass', cost: 2, weight: 1 },
+      ];
+
+      function getSortValue(fish) {
+        return fish.weight;
+      }
+
+      const ascSort = data.sort((a, b) => {
+        const valueA = getSortValue(a);
+        const valueB = getSortValue(b);
+        return valueA - valueB;
+      });
+
+      console.log(ascSort);
+    </script>
+  </body>
+</html>

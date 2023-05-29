@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Only-one-true-input</title>
+  </head>
+  <body>
+    <script>
+      const a = 'a';
+      const b = 'goodbye';
+      const c = 'hello';
+
+      function oneTrueInput(a, b, c) {
+        const count = Number(!!a) + Number(!!b) + Number(!!c);
+        if (count > 1) {
+          return new Error('Only one of a, b, c can be true');
+        }
+        return count;
+      }
+
+      console.log(oneTrueInput(a, b, c));
+    </script>
+  </body>
+</html>
